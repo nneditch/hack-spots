@@ -23,7 +23,7 @@
 		<h1>Where should I eat?</h1>
 		<div>
 			<ul class="nav">
-				<li><strong>Local restaurant reccomedations from locals</strong></li>
+				<li><strong>Local restaurant reccomedations from locals</strong> -</li>
 				<li><a href="#info">INFO</a> -</li>
 				<li><a href="http://jlord.github.com/sheetsee.js" target="_blank">POWERED BY SHEETSEE.JS</a> -</li>
 				<li><a href="http://www.github.com/nneditch/hack-spots" target="_blank">GITHUB</a> -</li>
@@ -60,7 +60,7 @@
 		<table>
 		<tr><th class="tHeader">Name</th><th class="tHeader">Address</th><th class="tHeader">City</th><th class="tHeader">State</th><th class="tHeader">Country</th><th class="">Elsewhere</th></tr>
 		  {{#rows}}
-		  	<tr id="{{rowNumber}}" class="spotRow"><td>{{name}}</td><td>{{address}}</td><td>{{city}}</td><td>{{state}}</td><td>{{country}}</td><td><a class="button" href="https://maps.google.com/maps?q={{address}},{{city}},{{state}}" target="_blank">G Map</a> <a class="button" href="http://www.yelp.com/search?find_desc={{name}}&find_loc={{city}},{{state}}" target="_blank">Yelp</a></td></tr>
+		  	<tr id="{{rowNumber}}" class="spotRow"><td><a href="{{url}}">{{name}}</a></td><td>{{address}}</td><td>{{city}}</td><td>{{state}}</td><td>{{country}}</td><td><a class="button" href="https://maps.google.com/maps?q={{address}},{{city}},{{state}}" target="_blank">G Map</a> <a class="button" href="http://www.yelp.com/search?find_desc={{name}}&find_loc={{city}},{{state}}" target="_blank">Yelp</a></td></tr>
 		  	<tr class="hideRow"><td>wifi: {{wifipassword}}</td></tr>
 		  {{/rows}}
 	  </table>
@@ -73,12 +73,7 @@
 				<p class="colorText">{{address}}<p>
 				<p class="colorText">{{city}}, {{state}} {{#postcode}}, {{postcode}} {{/postcode}}</p>
 				<ul>
-			  	<li><span class="category">Business Type:</span> {{businesstype}}</li>
-			  	<li><span class="category">Outlets:</span> {{outlets}}</li>
-			  	<li><span class="category">Couch:</span> {{couch}}</li>
-			  	<li><span class="category">Large Table:</span> {{largetable}}</li>
-			  	<li><span class="category">Outdoor Seating:</span> {{outdoorseating}}</li>
-			  	<li><span class="category">Brewing:</span> {{brewing}}</li>
+			  	<li><span class="category">Restaurant Type:</span> {{restauranttype}}</li>
 			  	<li><span class="category">Contributed By:</span> <a href="http://www.twitter.com/{{contributerstwitter}}" target="_blank">@{{contributerstwitter}}</a></li>
 		  	</ul>
 		  	<ul>
